@@ -16,7 +16,7 @@ img {
 
 /* Styles */
 :root {
-    /* Colors */
+  /* Colors */
   --green: hsl(75, 94%, 57%);
   --white: hsl(0, 0%, 100%);
   --grey-700: hsl(0, 0%, 20%);
@@ -27,4 +27,79 @@ img {
   --fw-regular: 400;
   --fw-semibold: 600;
   --fw-bold: 700;
+}
+
+body {
+  font-family: "Inter", Tahoma, sans-serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: var(--grey-900);
+  padding: 24px;
+}
+
+.card {
+  border-radius: 12px;
+  background-color: var(--grey-800);
+  padding: 24px;
+  text-align: center;
+  color: var(--white);
+  width: min(384px, 100%);
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.user {
+  .photo {
+    width: 88px;
+    aspect-ratio: 1 / 1;
+    border-radius: 999px;
+  }
+
+  .name {
+    font-weight: var(--fw-semibold);
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .location {
+    color: var(--green);
+    font-weight: var(--fw-bold);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 4px;
+  }
+}
+
+.quote {
+  padding-block: 24px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: var(--fw-bold);
+    background-color: var(--grey-700);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
