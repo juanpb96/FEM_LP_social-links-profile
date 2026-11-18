@@ -27,6 +27,10 @@ img {
   --fw-regular: 400;
   --fw-semibold: 600;
   --fw-bold: 700;
+
+  /* Sizes */
+  --fs-large: 1.5rem;
+  --fs-regular: 0.875rem;
 }
 
 body {
@@ -45,6 +49,10 @@ body {
   text-align: center;
   color: var(--white);
   width: min(384px, 100%);
+
+  @media (min-width: 27rem) {
+    padding: 40px;
+  }
 }
 
 .user {
@@ -63,14 +71,14 @@ body {
 
   .name {
     font-weight: var(--fw-semibold);
-    font-size: 24px;
+    font-size: var(--fs-large);
     line-height: 1.5;
   }
 
   .location {
     color: var(--green);
     font-weight: var(--fw-bold);
-    font-size: 14px;
+    font-size: var(--fs-regular);
     line-height: 1.5;
     margin-top: 4px;
   }
@@ -78,7 +86,7 @@ body {
 
 .quote {
   padding-block: 24px;
-  font-size: 14px;
+  font-size: var(--fs-regular);
   line-height: 1.5;
 }
 
@@ -99,7 +107,7 @@ nav {
     background-color: var(--grey-700);
     padding: 12px;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: var(--fs-regular);
     line-height: 1.5;
 
     &:hover, &:focus-visible {
